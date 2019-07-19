@@ -13,17 +13,17 @@ class RestaurantForm(forms.ModelForm):
         }
 
 
-class SignUpForm(forms.ModelForm):
+class SignupForm(forms.ModelForm):
     class Meta:
         model = User
-        fields = ['username', 'first_name', 'last_name', 'email' ,'password']
+        fields = ['username', 'password']
 
         widgets={
-        'password': forms.PasswordInput(),
+        'password': forms.PasswordInput()
         }
 
 
-class Signin(forms.Form):
-	user_name= forms.CharField(required=True, max_length= 150)
-	password=forms.CharField(required=True, widget=forms.PasswordInput())
+class SigninForm(forms.Form):
+	username= forms.CharField(max_length= 150)
+	password=forms.CharField(max_length= 150, widget=forms.PasswordInput())
 

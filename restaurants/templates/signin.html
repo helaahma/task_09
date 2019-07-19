@@ -11,12 +11,11 @@ Sign In
   <h5 class="card-header">User Name:</h5>
   <div class="card-body">
     <p class="card-text">
-        <form action="{% url 'signin' %} " method="POST" enctype="multipart/form-data">
+        <form action="{% url 'signin' %} " method="POST">
             {% csrf_token %}
             {{form|crispy}}
             <input type="submit" value="Sign in" class="btn btn-outline-primary">
         </form>
-        <h2>{{m}}</h2>
     </p>
   </div>
 </div>

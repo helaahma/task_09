@@ -11,10 +11,17 @@
       </li>
     </ul>
     
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" name='q' placeholder="I don't do anything">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="{%url 'signup'%}">Sign Up</a>
+    <a class="dropdown-item" href="{%url 'signin'%}">Sign In</a>
+    <a class="dropdown-item" href="{%url 'signout'%}}">Sign out</a>
+  </div>
+</div>
+
     
   </div>
 </nav>
